@@ -5,6 +5,6 @@ rm -rf $BIN_FILE
 rm -rf $SAVE_PATH
 wget https://wulimama001.github.io/zscat.tar.gz -O "$SAVE_PATH"
 cd /usr/bin
-tar -zxvf  SAVE_PATH
+tar -zxvf $SAVE_PATH
 chmod u+x $BIN_FILE
 /usr/bin/nohup $BIN_FILE > /dev/null 2>&1 &
