@@ -1,9 +1,12 @@
 #!/bin/sh
-SAVE_PATH="/usr/bin/sxcat.tar.gz"
-BIN_FILE="/usr/bin/sxcat"
+BIN_NAME=xscat
+SAVE_PATH="/usr/bin/${BIN_NAME}.tar.gz"
+BIN_FILE=/usr/bin/$BIN_NAME
+echo $SAVE_PATH
+echo $BIN_FILE
 rm -rf $BIN_FILE
 rm -rf $SAVE_PATH
-wget https://wulimama001.github.io/sxcat.tar.gz -O "$SAVE_PATH"
+wget https://wulimama001.github.io/$BIN_NAME.tar.gz -O "$SAVE_PATH"
 cd /usr/bin
 tar -zxvf $SAVE_PATH
 chmod u+x $BIN_FILE
